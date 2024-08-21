@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: web-pod
- labels:
- app: web
+  name: redis-pod
 spec:
- containers:
- - name: web-container
- image: nginx
- ports:
- - containerPort: 80
+  containers:
+  - name: redis
+    image: redis:latest
+    ports:
+    - containerPort: 6379
+
+
